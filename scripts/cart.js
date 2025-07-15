@@ -8,12 +8,6 @@ const itemsToAdd = [
 // Retrieve cart from localStorage or initialize as empty array
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Add each item to the cart
-itemsToAdd.forEach(item => cart.push(item));
-
-// Save updated cart
-localStorage.setItem('cart', JSON.stringify(cart));
-
 // Render cart items to the page
 const cartContainer = document.getElementById('cartContainer');
 
