@@ -265,3 +265,28 @@ footer {
 .hide {
   display: none;
 }
+
+.categories {
+  margin-top: 3rem;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.category-item {
+  text-align: center;
+}
+
+.category-item a {
+  text-decoration: none;
+  color: var(--font-body);
+}
+
+.category-img {
+  width: 64px;
+  height: 64px;
+}
