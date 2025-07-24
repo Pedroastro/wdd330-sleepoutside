@@ -1,4 +1,5 @@
  import { getLocalStorage, setLocalStorage } from './utils.mjs';
+ import { capitalizeWords } from './utils.mjs';
 
 export default class ProductDetails {
     constructor(productId, dataSource){
@@ -27,11 +28,11 @@ export default class ProductDetails {
 }
 
 function productDetailsTemplate(product) {
-  document.querySelector('h2').textContent = product.Brand.Name;
-  document.querySelector('h3').textContent = product.NameWithoutBrand;
+  document.querySelector('h2').textContent = capitalizeWords(product.Brand.Name);
+  document.querySelector('h3').textContent = capitalizeWords(product.NameWithoutBrand);
 
   const productImage = document.getElementById('productImage');
-  productImage.src = product.Image;
+  productImage.src = product.Images.PrimaryLarge || product.Images.PrimaryMedium;
   productImage.alt = product.NameWithoutBrand;
 
   document.getElementById('productPrice').textContent = product.FinalPrice;
