@@ -193,6 +193,31 @@ button {
 
 /* End product list card */
 
+.order-summary {
+  max-width: 400px;
+  margin-bottom: 2em;
+  padding: 1em;
+  border: 1px solid var(--light-grey);
+  background: #faf9f6;
+}
+
+.order-summary h3 {
+  margin-top: 0;
+}
+
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-summary li {
+  margin: 0.5em 0;
+}
+
+.order-summary .order-total {
+  margin-top: 1em;
+}
+
 .product-detail {
   padding: 1em;
   max-width: 500px;
