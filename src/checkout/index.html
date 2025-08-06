@@ -67,41 +67,60 @@
         <div class="order-summary">
           <h3>Order Summary</h3>
           <ul>
-            <li><strong>Subtotal:</strong> <span id="orderSubtotal">$0.00</span></li>
+            <li>
+              <strong>Subtotal:</strong> <span id="orderSubtotal">$0.00</span>
+            </li>
             <li><strong>Tax:</strong> <span id="orderTax">$0.00</span></li>
-            <li><strong>Shipping Estimate:</strong> <span id="orderShipping">$0.00</span></li>
-            <li class="order-total"><strong>Order Total:</strong> <span id="orderTotal">$0.00</span></li>
+            <li>
+              <strong>Shipping Estimate:</strong>
+              <span id="orderShipping">$0.00</span>
+            </li>
+            <li class="order-total">
+              <strong>Order Total:</strong> <span id="orderTotal">$0.00</span>
+            </li>
           </ul>
         </div>
-        <form class="checkout-form" autocomplete="on">
+        <form class="checkout" id="checkout" autocomplete="on">
           <fieldset>
             <legend>Customer Name</legend>
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required>
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <label for="fname">First Name</label>
+            <input type="text" id="firstName" name="fname" required />
+            <label for="lname">Last Name</label>
+            <input type="text" id="lastName" name="lname" required />
           </fieldset>
           <fieldset>
             <legend>Address</legend>
             <label for="street">Street Address</label>
-            <input type="text" id="street" name="street" required>
+            <input type="text" id="street" name="street" required />
             <label for="city">City</label>
-            <input type="text" id="city" name="city" required>
+            <input type="text" id="city" name="city" required />
             <label for="state">State</label>
-            <input type="text" id="state" name="state" required>
+            <input type="text" id="state" name="state" required />
             <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="zip" required pattern="\d{5}">
+            <input type="text" id="zip" name="zip" required pattern="\d{5}" />
           </fieldset>
           <fieldset>
             <legend>Payment</legend>
-            <label for="ccnum">Credit Card Number</label>
-            <input type="text" id="ccnum" name="ccnum" required pattern="\d{13,16}">
-            <label for="exp">Expiration Date</label>
-            <input type="month" id="exp" name="exp" required>
-            <label for="cvv">Security Code</label>
-            <input type="text" id="cvv" name="cvv" required pattern="\d{3,4}">
+            <label for="cardNumber">Credit Card Number</label>
+            <input
+              type="text"
+              id="ccnum"
+              name="cardNumber"
+              required
+              pattern="\d{13,16}"
+            />
+            <label for="expiration">Expiration Date</label>
+            <input type="month" id="exp" name="expiration" required />
+            <label for="code">Security Code</label>
+            <input
+              type="text"
+              id="cvv"
+              name="code"
+              required
+              pattern="\d{3,4}"
+            />
           </fieldset>
-          <button type="submit">Checkout</button>
+          <button id="checkoutSubmit" type="submit">Checkout</button>
         </form>
       </section>
     </main>
