@@ -1,4 +1,4 @@
- import { getLocalStorage, setLocalStorage } from './utils.mjs';
+ import { getLocalStorage, setLocalStorage, alertMessage } from './utils.mjs';
  import { capitalizeWords } from './utils.mjs';
 
 export default class ProductDetails {
@@ -20,6 +20,7 @@ export default class ProductDetails {
         let cart = await getLocalStorage('so-cart') || [];
         cart.push(this.product);
         await setLocalStorage('so-cart', cart);
+        alertMessage(`${this.product.NameWithoutBrand} added to cart!`);
     }
 
     renderProductDetails() {
