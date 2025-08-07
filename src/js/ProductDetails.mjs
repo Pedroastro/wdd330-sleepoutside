@@ -21,6 +21,15 @@ export default class ProductDetails {
         cart.push(this.product);
         await setLocalStorage('so-cart', cart);
         alertMessage(`${this.product.NameWithoutBrand} added to cart!`);
+
+        // Add spin animation to cart icon
+        const cartIcon = document.querySelector('.cart');
+        if (cartIcon) {
+          cartIcon.classList.add('spin');
+          setTimeout(() => {
+            cartIcon.classList.remove('spin');
+          }, 700);
+        }
     }
 
     renderProductDetails() {

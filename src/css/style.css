@@ -351,3 +351,38 @@ footer {
 .alert > p {
   margin: 0;
 }
+
+@keyframes spinY {
+  0% {
+    transform: rotateY(0deg) translateY(0);
+  }
+  12.5% {
+    transform: rotateY(180deg) translateY(-1px);
+  }
+  25% {
+    transform: rotateY(360deg) translateY(0);
+  }
+  37.5% {
+    transform: rotateY(540deg) translateY(-1px);
+  }
+  50% {
+    transform: rotateY(720deg) translateY(0);
+  }
+  62.5% {
+    transform: rotateY(900deg) translateY(-1px);
+  }
+  75% {
+    transform: rotateY(1080deg) translateY(0);
+  }
+  87.5% {
+    transform: rotateY(1260deg) translateY(-1px);
+  }
+  100% {
+    transform: rotateY(1440deg) translateY(0);
+  }
+}
+
+.cart.spin svg {
+  animation: spinY 0.7s linear;
+  backface-visibility: hidden;
+}
